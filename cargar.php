@@ -39,12 +39,17 @@ include("header.php");
 
         <?php 
          
+         if (isset ($_GET['error_codigo'])){
+              
+            echo "<h3> Codigo de verificacion incorrecto </h3>";
+        }
+
+
         if (isset ($_GET['ok'])){
               
             echo "<h3> Componente Cargado con Exito </h3>";
         } 
-        }
-        else{
+        }else{
            header("Location:index.php");
         }
    
